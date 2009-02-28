@@ -1,5 +1,3 @@
-require 'coderay'
-
 module CodeTags
   include Radiant::Taggable
 
@@ -10,7 +8,13 @@ module CodeTags
     <pre><code><r:code lang="ruby" lines="table">...</r:code></pre></code>
   }
   tag 'code' do |tag|
-    CodeRay.scan( tag.expand, tag.attr['lang'] || 'ruby' ).div( :line_numbers => tag.attr['lines'], :css => :style, :style => :cycnus )
+    code_processor.highlight( tag.expand, :lang => tag.attr['lang'], :lines => tag.attr['lines'] )
+  end
+
+  private
+
+  def code_processor
+    @@code_processor ||= CodeProcessors.select
   end
 
 end
