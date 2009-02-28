@@ -1,6 +1,6 @@
 require 'syntax/convertors/html'
 
-class CodeProcessors::SyntaxProcessor
+class CodeProcessors::SyntaxProcessor < CodeProcessors::Base
   
   # Highlight code using Syntax gem
   # Options:

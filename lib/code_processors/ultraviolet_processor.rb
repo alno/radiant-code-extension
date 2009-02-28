@@ -1,6 +1,6 @@
 require 'uv'
 
-class CodeProcessors::UltravioletProcessor
+class CodeProcessors::UltravioletProcessor < CodeProcessors::Base
   
   # Highlight code using Syntax gem
   # Options:

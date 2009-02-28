@@ -4,7 +4,7 @@ Extension which provides support for code highlighting to Radiant CMS. To highli
 
 = Usage
 
-In your pages put code between <tt>&lt;r:code&gt;</tt> and <tt>&lt;/r:code&gt;</tt> tags. Supported attributes:
+In your pages put code between <tt><r:code></tt> and <tt></r:code></tt> tags. Supported attributes:
 * <tt>lang</tt> - Code language. Set of supported languages depends on used code processor.
 * <tt>lines</tt> - Render line numbers: <tt>'table'</tt>,<tt>'inline'</tt> or <tt>nil</tt>
 
@@ -14,6 +14,7 @@ You may specify preferred code processor in Radiant::Config['code.processor']. C
 * <tt>ultraviolet</tt> - http://ultraviolet.rubyforge.org
 * <tt>coderay</tt> - http://coderay.rubychan.de
 * <tt>syntax</tt> - http://syntax.rubyforge.org
+* <tt>highlight_js</tt>* - http://softwaremaniacs.org/soft/highlight
 
 Copyright (c) 2009 Alexey Noskov
 

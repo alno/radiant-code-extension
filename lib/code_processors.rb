@@ -1,6 +1,6 @@
 module CodeProcessors
   
-  CODE_PROCESSORS = [ 'ultraviolet', 'coderay', 'syntax' ]
+  CODE_PROCESSORS = [ 'ultraviolet', 'coderay', 'syntax', 'highlight_js' ]
   
   def self.select
     name = Radiant::Config['code.processor']
@@ -10,7 +10,7 @@ module CodeProcessors
       names = CODE_PROCESSORS.dup
 
       begin
-        return CodeProcessors.const_get( "#{names.first.to_s.classify}Processor" ).new unless names.empty?
+        return CodeProcessors.const_get( "#{names.first.to_s.camelize}Processor" ).new unless names.empty?
       rescue Object, Exception  
         raise unless load_related_exception? $!
 
