@@ -1,0 +1,17 @@
+= Code Extension
+
+Extension which provides support for code highlighting to Radiant CMS. To highlight code CodeRay gem used.
+
+= Usage
+
+In your pages put code between <r:code> and </r:code> tags. Supported attributes:
+* <tt>lang</tt> - Code language
+* <tt>lines</tt> - Render line numbers ('table','inline',nil)
+
+= Configuration
+
+You may specify preferred code processor in Radiant::Config['code.processor']. Currently supported processors:
+* <tt>code_ray</tt> - http://coderay.rubychan.de/
+
+Copyright (c) 2009 Alexey Noskov
+
