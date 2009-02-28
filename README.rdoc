@@ -12,13 +12,15 @@ In your pages put code between <tt><r:code></tt> and <tt></r:code></tt> tags. Su
 
 = Configuration
 
-You may specify preferred code processor in <tt>code.processor</tt> setting. Currently supported processors:
-* <tt>ultraviolet</tt> - http://ultraviolet.rubyforge.org
-* <tt>coderay</tt> - http://coderay.rubychan.de
+You may specify preferred code processor in <b><tt>code.processor</tt></b> setting. Currently supported processors:
+* <tt>ultraviolet</tt> - http://ultraviolet.rubyforge.org - syntax highlighting gem using texmate syntax files and so supporting a huge set of languages.
+* <tt>coderay</tt> - http://coderay.rubychan.de - fast syntax highlighting gem with no dependencies, and ability to inline styles (no stylesheets needed).
 * <tt>syntax</tt> - http://syntax.rubyforge.org
-* <tt>highlight_js</tt>* - http://softwaremaniacs.org/soft/highlight - client-side library
+* <tt>highlight_js</tt> - http://softwaremaniacs.org/soft/highlight - excellent client-side library by softwaremaniacs.org.
 
-You may specify theme in <tt>code.theme</tt> setting. Supported themes depends on selected processor.
+You may specify theme in <b><tt>code.theme</tt></b> setting. Supported themes depends on selected processor.
+
+In <b><tt>code.language</tt></b> setting you may specify default language, which is supposed in tags without <tt>lang</tt> attribute. If there are no such setting, ruby language is used.
 
 Copyright (c) 2009 Alexey Noskov
 

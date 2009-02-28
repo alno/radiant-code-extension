@@ -7,7 +7,7 @@ class CodeProcessors::HighlightJsProcessor < CodeProcessors::Base
   def highlight( code, options = {} )
     options.symbolize_keys!
 
-    "<pre><code class=\"#{options[:lang] || 'ruby'}\">#{CGI.escapeHTML(code)}</code></pre>"
+    "<pre><code class=\"#{options[:lang] || language}\">#{CGI.escapeHTML(code)}</code></pre>"
   end
 
   # Include required javascripts

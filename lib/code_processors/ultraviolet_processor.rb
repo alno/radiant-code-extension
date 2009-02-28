@@ -9,7 +9,7 @@ class CodeProcessors::UltravioletProcessor < CodeProcessors::Base
   def highlight( code, options = {} )
     options.symbolize_keys!
 
-    Uv.parse( code, 'xhtml', ( options[:lang] || 'ruby' ), options.key?( :lines ), theme )
+    Uv.parse( code, 'xhtml', ( options[:lang] || language ), options.key?( :lines ), theme )
   end
 
   def include_stylesheets

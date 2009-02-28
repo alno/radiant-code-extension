@@ -9,7 +9,7 @@ class CodeProcessors::SyntaxProcessor < CodeProcessors::Base
   def highlight( code, options = {} )
     options.symbolize_keys!
 
-    Syntax::Convertors::HTML.for_syntax( options[:lang] || 'ruby' ).convert( code )
+    Syntax::Convertors::HTML.for_syntax( options[:lang] || language ).convert( code )
   end
 
 end
