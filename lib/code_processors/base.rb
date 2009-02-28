@@ -8,13 +8,23 @@ class CodeProcessors::Base
   end
 
   # Include required scripts
-  def include_scripts
+  def include_javascripts
     ''
   end
 
   # Include required stylesheets
   def include_stylesheets
     ''
+  end
+
+  def theme
+    @theme ||= Radiant::Config['code.theme'] || default_theme
+  end
+
+  protected
+
+  def default_theme
+    'default'
   end
 
 end 

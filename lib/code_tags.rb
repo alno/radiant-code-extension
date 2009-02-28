@@ -11,6 +11,20 @@ module CodeTags
     code_processor.highlight( tag.expand, :lang => tag.attr['lang'], :lines => tag.attr['lines'] )
   end
 
+  desc %{
+    Includes required stylesheets for code highlighting.
+  }
+  tag 'include_code_stylesheets' do |tag|
+    code_processor.include_stylesheets
+  end
+
+  desc %{
+    Includes required javascripts for code highlighting.
+  }
+  tag 'include_code_javascripts' do |tag|
+    code_processor.include_javascripts
+  end
+
   private
 
   def code_processor

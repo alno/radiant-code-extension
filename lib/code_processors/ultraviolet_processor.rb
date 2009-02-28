@@ -9,7 +9,17 @@ class CodeProcessors::UltravioletProcessor < CodeProcessors::Base
   def highlight( code, options = {} )
     options.symbolize_keys!
 
-    Uv.parse( code, 'xhtml', ( options[:lang] || 'ruby' ), options.key?( :lines ), 'amy' )
+    Uv.parse( code, 'xhtml', ( options[:lang] || 'ruby' ), options.key?( :lines ), theme )
+  end
+
+  def include_stylesheets
+    '<link rel="stylesheet" type="text/css" href="http://ultraviolet.rubyforge.org/css/' + theme + '.css" />'
+  end
+
+  protected
+
+  def default_theme
+    'active4d'
   end
 
 end

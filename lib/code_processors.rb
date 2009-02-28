@@ -20,7 +20,7 @@ module CodeProcessors
 
       raise "Can't load any code processors"
     else
-      CodeProcessors.const_get( "#{name.to_s.classify}Processor" ).new
+      CodeProcessors.const_get( "#{name.to_s.camelize}Processor" ).new
     end
   end
 

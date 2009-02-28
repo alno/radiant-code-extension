@@ -4,17 +4,21 @@ Extension which provides support for code highlighting to Radiant CMS. To highli
 
 = Usage
 
+Somewhere in head of your pages put tags <tt><r:include_code_stylesheets /></tt> and <tt><r:include_code_javascripts /></tt>. These tags will include code stylesheets for selected theme and required javascripts (if you use client-side library). Also, you may not to use these tags, but include required files manually (for example, if you are using your own customized theme or javascript library).
+
 In your pages put code between <tt><r:code></tt> and <tt></r:code></tt> tags. Supported attributes:
 * <tt>lang</tt> - Code language. Set of supported languages depends on used code processor.
 * <tt>lines</tt> - Render line numbers: <tt>'table'</tt>,<tt>'inline'</tt> or <tt>nil</tt>
 
 = Configuration
 
-You may specify preferred code processor in Radiant::Config['code.processor']. Currently supported processors:
+You may specify preferred code processor in <tt>Radiant::Config['code.processor']</tt>. Currently supported processors:
 * <tt>ultraviolet</tt> - http://ultraviolet.rubyforge.org
 * <tt>coderay</tt> - http://coderay.rubychan.de
 * <tt>syntax</tt> - http://syntax.rubyforge.org
-* <tt>highlight_js</tt>* - http://softwaremaniacs.org/soft/highlight
+* <tt>highlight_js</tt>* - http://softwaremaniacs.org/soft/highlight - client-side library
+
+You may specify theme in <tt>Radiant::Config['code.theme']</tt>. Supported themes depends on selected processor.
 
 Copyright (c) 2009 Alexey Noskov
 

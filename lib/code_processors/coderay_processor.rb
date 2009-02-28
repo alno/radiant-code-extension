@@ -9,7 +9,13 @@ class CodeProcessors::CoderayProcessor < CodeProcessors::Base
   def highlight( code, options = {} )
     options.symbolize_keys!
 
-    CodeRay.scan( code, options[:lang] || 'ruby' ).div( :line_numbers => options[:lines], :css => :style, :style => :cycnus )
+    CodeRay.scan( code, options[:lang] || 'ruby' ).div( :line_numbers => options[:lines], :css => :style, :style => theme )
+  end
+ 
+  protected
+
+  def default_theme
+    'cycnus'
   end
 
 end
