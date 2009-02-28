@@ -1,6 +1,6 @@
 require 'coderay'
 
-class CodeProcessors::CodeRayProcessor
+class CodeProcessors::CoderayProcessor
   
   # Highlight code using CodeRay
   # Options:
