@@ -12,7 +12,7 @@ class CodeProcessors::HighlightJsProcessor < CodeProcessors::Base
 
   # Include required javascripts
   def include_javascripts
-    '<script src="http://softwaremaniacs.org/media/soft/highlight/highlight.pack.js"></script><script type="text/javascript">hljs.tabReplace = \'    \';hljs.initHighlightingOnLoad();</script>'
+    '<script type="text/javascript" src="http://softwaremaniacs.org/media/soft/highlight/highlight.pack.js"></script><script type="text/javascript">hljs.tabReplace = \'    \';hljs.initHighlightingOnLoad();</script>'
   end
 
   # Include required stylesheets
