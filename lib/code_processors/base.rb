@@ -42,4 +42,26 @@ class CodeProcessors::Base
     'ruby'
   end
 
+  def tag( name, options = {} )
+    name = name.to_s
+
+    str = '<'
+    str << name
+
+    options.each do |k,v|
+      str << ' '
+      str << k.to_s
+      str << '="'
+      str << v.to_s
+      str << '"'
+    end
+
+    str << '>'
+    str << yield
+    str << '</'
+    str << name
+    str << '>'
+    str
+  end
+
 end 
